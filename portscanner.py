@@ -34,6 +34,7 @@ def main():
         print(f"Error: {e}")
         sys.exit(1)
 
+    # Start timer for total scan time
     start_time = time.time()
     
     # Perform port scanning
@@ -49,6 +50,7 @@ def main():
     for thread in threads:
         thread.join()
 
+    # Print total scan time
     end_time = time.time()
     total_time = end_time - start_time
     print(f"Scan completed in {total_time:.2f} seconds")
